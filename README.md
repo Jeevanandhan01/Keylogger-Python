@@ -47,9 +47,6 @@ Please note that the use of keyloggers must adhere to legal and ethical guidelin
 
 Contributions to this project are welcome. If you encounter any issues or have suggestions for improvements, please feel free to submit a pull request or open an issue.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
